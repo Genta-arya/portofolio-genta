@@ -36,7 +36,7 @@ function Project1() {
           <div className="flex justify-center items-center">
             <div className="hidden md:block">
               <Link
-                to="/beranda"
+                to="/"
                 className="   text-gray-300 hover:text-white px-3 py-2 rounded"
               >
                 <FontAwesomeIcon icon={faHome} />
@@ -44,7 +44,7 @@ function Project1() {
             </div>
             <div className="md:hidden">
               <button className="text-gray-300 hover:text-white focus:outline-none">
-                <Link to="/beranda">
+                <Link to="/">
                   <FontAwesomeIcon icon={faHome} />
                 </Link>
               </button>
