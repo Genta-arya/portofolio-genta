@@ -31,22 +31,23 @@ function Project1() {
 
   return (
     <div className="container mx-auto">
-      <nav className="bg-gray-800 py-4 px-6 rounded-2xl ;">
+      <nav className="bg-gray-800 py-4 px-6 rounded-2xl">
         <div className="container mx-auto">
           <div className="flex justify-center items-center">
             <div className="hidden md:block">
               <Link
                 to="/"
-                className="   text-gray-300 hover:text-white px-3 py-2 rounded"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded"
               >
                 <FontAwesomeIcon icon={faHome} />
               </Link>
             </div>
             <div className="md:hidden">
-              <button className="text-gray-300 hover:text-white focus:outline-none">
-                <Link to="/">
-                  <FontAwesomeIcon icon={faHome} />
-                </Link>
+              <button
+                className="text-gray-300 hover:text-white focus:outline-none"
+                onClick={toggleMobileMenu}
+              >
+                <FontAwesomeIcon icon={faHome} />
               </button>
             </div>
           </div>
@@ -122,10 +123,12 @@ function Project1() {
       </div>
 
       <div className="mb-8 mt-24">
-        <h2 className="text-3xl text-gray-800 font-bold mb-4">
+        <h2 className="text-3xl text-gray-800 font-bold mb-4 border-b-2 pb-2">
           {project.name}
         </h2>
-        <p className="text-gray-600 mb-8">{project.description}</p>
+        <p className="text-gray-600 mb-8 border-b-2 pb-2">
+          {project.description}
+        </p>
         <a
           href={project.link}
           target="_blank"
@@ -135,6 +138,8 @@ function Project1() {
           Source Code
         </a>
       </div>
+
+    
     </div>
   );
 }

@@ -4,15 +4,35 @@ import tiket from "../../Asset/tiket1.jpg";
 import gempa from "../../Asset/gempa1.jpg";
 import Bloogers from "../../Asset/blog2.jpg";
 import profil from "../../Asset/profil.jpeg";
+import react from "../../Asset/icons8-react-native-48.png";
+import tailwind from "../../Asset/icons8-tailwind-css-48.png";
+import mysql from "../../Asset/icons8-mysql-48.png";
+import express from "../../Asset/icons8-express-js-48.png";
+import android from "../../Asset/icons8-android-48.png";
+import waste from "../../Asset/waste1.png";
+
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faInstagram,
   faLinkedin,
+  faReact,
+  faHtml5,
+  faCode,
 } from "@fortawesome/free-brands-svg-icons";
+import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 
 function Beranda() {
+  const skills = [
+    { name: "React Native", image: react },
+    { name: "React.js", image: react },
+    { name: "Express.js", image: express },
+    { name: "Tailwind CSS", image: tailwind },
+    {name:"Android Studio Kotlin", image: android},
+    {name:"Mysql", image: mysql},
+  ];
+
   return (
     <div className="bg-gray-100">
       <header className="bg-gray-800 py-4">
@@ -29,8 +49,10 @@ function Beranda() {
       </header>
       <section id="about" className="py-12">
         <div className="container mx-auto">
-          <h2 className="text-3xl text-gray-800 font-bold mb-6 flex justify-center">About Me</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-3xl text-gray-800 font-bold mb-6 flex justify-center">
+            About Me
+          </h2>
+          <p className="text-lg text-gray-600 m-5">
             I am a mobile development enthusiast with a strong focus on React
             Native. I specialize in building cross-platform mobile applications
             using React Native, delivering optimized and engaging user
@@ -53,73 +75,130 @@ function Beranda() {
             innovative approaches to enhance the quality and performance of my
             applications.
           </p>
+          {skills.length <= 4 ? (
+            <div className="flex justify-center mt-8">
+              <div className="max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <div className="px-4 py-2">
+                  <h3 className="text-xl text-gray-800 font-semibold mb-2">
+                    Skills
+                  </h3>
+                  <ul className="text-gray-600">
+                    {skills.map((skill, index) => (
+                      <li key={index} className="flex items-center">
+                        {typeof skill === "string" ? (
+                          <span className="mr-2">{skill}</span>
+                        ) : (
+                          <>
+                            {skill.image && (
+                              <img
+                                src={skill.image}
+                                alt={skill.name}
+                                className="w-8 h-8 mr-2"
+                              />
+                            )}
+                            <span>{skill.name}</span>
+                          </>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="container mx-auto mt-8 ">
+             
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5">
+                {skills.map((skill, index) => (
+                  <div
+                    className="bg-white rounded-lg p-4 flex flex-col"
+                    key={index}
+                  >
+                    <div className="flex items-center mb-2">
+                      {typeof skill === "string" ? (
+                        <span>{skill}</span>
+                      ) : (
+                        <>
+                          {skill.image && (
+                            <img
+                              src={skill.image}
+                              alt={skill.name}
+                              className="w-8 h-8 mr-2"
+                            />
+                          )}
+                          <span>{skill.name}</span>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
       <section id="projects" className="py-12 bg-gray-200">
         <div className="container mx-auto">
-          <h2 className="text-3xl text-gray-800 font-bold mb-6 flex justify-center">My Projects</h2>
-          <div className="flex flex-wrap -mx-4">
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-              <div className="bg-white rounded-lg p-4">
-                <Link to="/project/1">
-                  <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500">
-                    Skripsi Project
-                  </h3>
-                </Link>
-                <p className="text-gray-600">
-                  Development mobile applications using react native expo.
-                </p>
-                <img
-                  src={skripsi}
-                  alt="Project 1"
-                  className="mt-4 rounded-lg"
-                />
-              </div>
+          <h2 className="text-3xl text-gray-800 font-bold mb-6 flex justify-center">
+            My Projects
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5">
+            <div className="bg-white rounded-lg p-4 flex flex-col">
+              <Link to="/project/1">
+                <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500 flex justify-center">
+                  Skripsi Project
+                </h3>
+              </Link>
+              <p className="text-gray-600 ">
+                Development mobile applications using react native expo.
+              </p>
+              <img src={skripsi} alt="Project 1" className="mt-4 rounded-lg" />
             </div>
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-              <div className="bg-white rounded-lg p-4">
-                <Link to="#">
-                  <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500">
-                    Ticket Speadboat
-                  </h3>
-                </Link>
-                <p className="text-gray-600">
-                  Development mobile applications using react native expo.
-                </p>
-                <img src={tiket} alt="Project 2" className="mt-4 rounded-lg" />
-              </div>
+            <div className="bg-white rounded-lg p-4 flex flex-col">
+              <Link to="#">
+                <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500 flex justify-center">
+                  Ticket Speadboat
+                </h3>
+              </Link>
+              <p className="text-gray-600">
+                Development mobile applications using react native expo.
+              </p>
+              <img src={tiket} alt="Project 2" className="mt-4 rounded-lg" />
+            </div>
+            <div className="bg-white rounded-lg p-4 flex flex-col">
+              <Link to="#">
+                <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500 flex justify-center">
+                  Informasi Gempa dan cuaca
+                </h3>
+              </Link>
+              <p className="text-gray-600">
+                Development mobile applications using react native expo.
+              </p>
+              <img src={gempa} alt="Project 3" className="mt-4 rounded-lg" />
+            </div>
+            <div className="bg-white rounded-lg p-4 flex flex-col">
+              <Link to="#">
+                <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500 flex justify-center">
+                  WasteCreative
+                </h3>
+              </Link>
+              <p className="text-gray-600">
+                Development android applications using android studio kotlin.
+              </p>
+              <img src={waste} alt="Project 4" className="mt-4 rounded-lg" />
             </div>
 
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-              <div className="bg-white rounded-lg p-4">
-                <Link to="#">
-                  <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500">
-                    Informasi Gempa dan cuaca
-                  </h3>
-                </Link>
-                <p className="text-gray-600">
-                  Development mobile applications using react native expo.
-                </p>
-                <img src={gempa} alt="Project 3" className="mt-4 rounded-lg" />
-              </div>
-            </div>
-            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
-              <div className="bg-white rounded-lg p-4">
-                <Link to="#">
-                  <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500">
-                    Web Bloggers
-                  </h3>
-                </Link>
-                <p className="text-gray-600">
-                  Development Web blog Nahdalatul Ulama using react js and
-                  tailwind css.
-                </p>
-                <img
-                  src={Bloogers}
-                  alt="Project 4"
-                  className="mt-4 rounded-lg"
-                />
-              </div>
+            <div className="bg-white rounded-lg p-4 flex flex-col">
+              <Link to="#">
+                <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500 flex justify-center">
+                  Web Bloggers
+                </h3>
+              </Link>
+              <p className="text-gray-600">
+                Development Web blog Nahdalatul Ulama using react js and
+                tailwind css.
+              </p>
+              <img src={Bloogers} alt="Project 4" className="mt-4 rounded-lg" />
             </div>
           </div>
         </div>
