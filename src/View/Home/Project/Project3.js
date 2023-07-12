@@ -6,6 +6,7 @@ import ft1 from "../../../Asset/gempa1.jpg";
 import ft2 from "../../../Asset/gempa2.jpg";
 import ft3 from "../../../Asset/gempa3.jpg";
 import ft4 from "../../../Asset/gempa4.jpg";
+import ft5 from "../../../Asset/gempa5.jpg";
 
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,9 +22,11 @@ function Project3() {
       "This application serves to provide related information about the latest earthquake, an earthquake with a magnitude of more than 5.0 and provides weather-related information at the current location. This application is designed using React Native Expo and the data is taken from the BMKG API.",
     images: [
       { original: ft1, thumbnail: ft1 },
+      { original: ft5, thumbnail: ft5 },
       { original: ft2, thumbnail: ft2 },
       { original: ft3, thumbnail: ft3 },
       { original: ft4, thumbnail: ft4 },
+      
     ],
     link: "https://github.com/Genta-arya/Project-Gempa",
   };
@@ -65,7 +68,12 @@ function Project3() {
                 className="text-gray-300 hover:text-white focus:outline-none"
                 onClick={toggleMobileMenu}
               >
-                <FontAwesomeIcon icon={faHome} />
+               <Link
+                  to="/"
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded"
+                >
+                  <FontAwesomeIcon icon={faHome} />
+                </Link>
               </button>
             </div>
           </div>

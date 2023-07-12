@@ -48,7 +48,12 @@ function Project1() {
                 className="text-gray-300 hover:text-white focus:outline-none"
                 onClick={toggleMobileMenu}
               >
+                <Link
+                to="/"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded"
+              >
                 <FontAwesomeIcon icon={faHome} />
+              </Link>
               </button>
             </div>
           </div>
