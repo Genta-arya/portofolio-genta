@@ -254,7 +254,7 @@ function Beranda() {
               <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
             <a
-              href="www.linkedin.com/in/m-gentha-arya-pratama-37b419231"
+              href="https://www.linkedin.com/in/m-gentha-arya-pratama-37b419231/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-800 mr-4"
