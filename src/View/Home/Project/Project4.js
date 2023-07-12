@@ -2,32 +2,32 @@ import React, { useState, useEffect } from "react";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { motion } from "framer-motion";
 import ImageGallery from "react-image-gallery";
-import ft1 from "../../../Asset/tiket1.jpg";
-import ft2 from "../../../Asset/tiket2.jpg";
-import ft3 from "../../../Asset/tiket5.jpg";
-import ft4 from "../../../Asset/tiket7.jpg";
-import ft5 from "../../../Asset/tiket9.jpg";
+import ft1 from "../../../Asset/waste2.png";
+import ft2 from "../../../Asset/waste3.png";
+import ft3 from "../../../Asset/waste6.png";
+import ft4 from "../../../Asset/waste5.png";
+import ft5 from "../../../Asset/waste4.png";
 
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 
-function Project2() {
+function Project4() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [thumbnailsClass, setThumbnailsClass] = useState("");
 
   const project = {
-    name: "Ticket Speedboat",
+    name: "WasteCreative",
     description:
-      "This is an application for ordering speadboat tickets in the Ketapang area, West Kalimantan. This application is made using React Native Expo, Express JS and has integrated payments using Midtrans as a payment gateway. the application already has features such as user auth, ticket ordering, order history and customer service chat.",
+      "WasteCreative is an android application that can detect household waste objects and suggest crafts that can be made based on the detection results. We will also create a market for buying and selling user-made crafts. Besides being able to reduce the amount of household waste, this application also has the potential to help improve the welfare of creative industry SMEs. This is the reason why we want to solve this problem. This project was created as one of the requirements for completing Bangkit Academy 2022",
     images: [
-      { original: ft3, thumbnail: ft3 },
       { original: ft1, thumbnail: ft1 },
       { original: ft2, thumbnail: ft2 },
+      { original: ft3, thumbnail: ft3 },
       { original: ft4, thumbnail: ft4 },
       { original: ft5, thumbnail: ft5 },
     ],
-    link: "https://github.com/Genta-arya/Ticket-Online",
+    link: "https://github.com/Genta-arya/waste-creative-final",
   };
 
   const toggleMobileMenu = () => {
@@ -84,28 +84,24 @@ function Project2() {
       </motion.p>
 
       <motion.div
-        className={`mt-8 flex justify-center ${thumbnailsClass}`}
+        className={`mt-8 flex justify-center ${thumbnailsClass} `}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2 }}
       >
         <ImageGallery
           items={project.images}
-          showPlayButton={true}
-          showFullscreenButton={true}
           slideInterval={3000}
           renderFullscreenButton={() => null}
           renderPlayPauseButton={() => null}
-          originalClass="w-full h-auto "
+          originalClass="w-full h-auto m-12 "
           renderThumbInner={(item) => (
             <img
               src={item.thumbnail}
               alt={item.thumbnailAlt}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full  "
             />
           )}
-          
-         
         />
       </motion.div>
 
@@ -136,4 +132,4 @@ function Project2() {
   );
 }
 
-export default Project2;
+export default Project4;
