@@ -5,6 +5,7 @@ import Project1 from './View/Home/Project/Project1';
 import Project2 from './View/Home/Project/Project2';
 import Project3 from './View/Home/Project/Project3';
 import Project4 from './View/Home/Project/Project4';
+import Project5 from './View/Home/Project/Project5';
 import DetailNotFound from './View/Home/Project/Notfound';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/project/2" element={<Project2 />} />
           <Route path="/project/3" element={<Project3 />} />
           <Route path="/project/4" element={<Project4 />} />
+          <Route path="/project/5" element={<Project5 />} />
           <Route path="*" element={<DetailNotFound />} />
         </Routes>
       </div>
