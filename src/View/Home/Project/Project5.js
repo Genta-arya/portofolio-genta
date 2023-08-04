@@ -27,6 +27,7 @@ function Project4() {
      
     ],
     link: "https://github.com/Genta-arya/Nu-WebBlog",
+    demo: "https://nu-ketapang.vercel.app",
   };
 
   const toggleMobileMenu = () => {
@@ -130,6 +131,17 @@ function Project4() {
           whileTap={{ scale: 0.95 }}
         >
           Source Code
+        </motion.a>
+
+        <motion.a
+          href={project.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors ml-5"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Demo
         </motion.a>
       </motion.div>
     </div>
