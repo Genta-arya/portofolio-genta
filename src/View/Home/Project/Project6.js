@@ -2,24 +2,24 @@ import React, { useState, useEffect } from "react";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { motion } from "framer-motion";
 import ImageGallery from "react-image-gallery";
-import ft1 from "../../../Asset/nu1.png";
-import ft2 from "../../../Asset/nu2.png";
-import ft3 from "../../../Asset/nu3.png";
-import ft4 from "../../../Asset/nu5.png";
-import ft5 from "../../../Asset/nu4.png";
+import ft1 from "../../../Asset/blog-mobile1.jpg"
+import ft2 from "../../../Asset/blog-mobile2.jpg";
+import ft3 from "../../../Asset/blog-mobile3.jpg";
+import ft4 from "../../../Asset/blog-mobile4.jpg";
+import ft5 from "../../../Asset/blog-mobile5.jpg";
 
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 
-function Project5() {
+function Project6() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [thumbnailsClass, setThumbnailsClass] = useState("");
 
   const project = {
-    name: "NU-Ketapang Web Blog",
+    name: "NU-Ketapang news portal",
     description:
-      "This application is a website for Nahdalatul Ulama, this website was created with the aim of sharing information related to NU activities. This website is built using React JS",
+      "Nahdalatul Ulama news portal from the web bloggers project, this application is developed using react native",
     images: [
       { original: ft1, thumbnail: ft1 },
       { original: ft2, thumbnail: ft2 },
@@ -28,8 +28,8 @@ function Project5() {
       { original: ft5, thumbnail: ft5 },
      
     ],
-    link: "https://github.com/Genta-arya/Nu-WebBlog",
-    demo: "https://nu-ketapang.vercel.app",
+    link: "https://github.com/Genta-arya/blog-mobile-version",
+   
   };
 
   const toggleMobileMenu = () => {
@@ -135,19 +135,10 @@ function Project5() {
           Source Code
         </motion.a>
 
-        <motion.a
-          href={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors ml-5"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Demo
-        </motion.a>
+    
       </motion.div>
     </div>
   );
 }
 
-export default Project5;
+export default Project6;

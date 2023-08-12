@@ -13,6 +13,7 @@ import mysql from "../../Asset/icons8-mysql-48.png";
 import express from "../../Asset/icons8-express-js-48.png";
 import android from "../../Asset/icons8-android-48.png";
 import waste from "../../Asset/waste1.png";
+import mobile from "../../Asset/blog-mobile1.jpg";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
@@ -65,6 +66,13 @@ function Beranda() {
       description:
         "Development Web blog Nahdalatul Ulama using react js and tailwind css.",
       image: Bloogers,
+    },
+    {
+      id: 6,
+      name: "Bloggers Mobile",
+      description:
+        "Nahdalatul Ulama news portal from the web bloggers project, this application is developed using react native",
+      image: mobile,
     },
   ];
 
