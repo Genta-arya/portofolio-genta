@@ -28,7 +28,7 @@ function Project7() {
       { original: ft5, thumbnail: ft5 },
      
     ],
-    link: "https://github.com/Genta-arya/Management-Ijazah/tree/master/Mobile",
+    link: "https://github.com/Genta-arya/Management-Ijazah",
    
   };
 
