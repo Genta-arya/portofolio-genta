@@ -14,6 +14,7 @@ import express from "../../Asset/icons8-express-js-48.png";
 import android from "../../Asset/icons8-android-48.png";
 import waste from "../../Asset/waste1.png";
 import mobile from "../../Asset/blog-mobile1.jpg";
+import Ijazah from "../../Asset/smk2.jpeg";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
@@ -79,7 +80,7 @@ function Beranda() {
       name: "Management Ijazah",
       description:
         "a simple mobile application for managing diploma files, this application is made using react native has crud features, search for files and some animations",
-      image: mobile,
+      image: Ijazah,
     },
   ];
 
