@@ -74,6 +74,13 @@ function Beranda() {
         "Nahdalatul Ulama news portal from the web bloggers project, this application is developed using react native",
       image: mobile,
     },
+    {
+      id: 7,
+      name: "Management Ijazah",
+      description:
+        "a simple mobile application for managing diploma files, this application is made using react native has crud features, search for files and some animations",
+      image: mobile,
+    },
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
