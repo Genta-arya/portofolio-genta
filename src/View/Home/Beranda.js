@@ -27,7 +27,7 @@ import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 
 function Beranda() {
   const skills = [
-    { name: "React Native Expo", image: react },
+    { name: "React Native", image: react },
     { name: "React.js", image: react },
     { name: "Express.js", image: express },
     { name: "Tailwind CSS", image: tailwind },
