@@ -70,7 +70,7 @@ function Project1() {
       </motion.p>
 
       <motion.div
-        className="mt-8 flex justify-center"
+        className="mt-8 flex justify-center "
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2 }}
@@ -82,12 +82,12 @@ function Project1() {
           slideInterval={3000}
           renderFullscreenButton={() => null}
           renderPlayPauseButton={() => null}
-          originalClass="w-full h-auto"
+          originalClass="w-full h-auto hover:scale-105 transition-all"
           renderThumbInner={(item) => (
             <img
               src={item.thumbnail}
               alt={item.thumbnailAlt}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full "
             />
           )}
         />

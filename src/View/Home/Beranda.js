@@ -219,24 +219,24 @@ function Beranda() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5  ">
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project) => (
                 <motion.div
                   key={project.id}
-                  className="bg-white rounded-lg p-4 flex flex-col"
+                  className="bg-white rounded-lg p-4 flex flex-col "
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <Link to={`/project/${project.id}`}>
-                    <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500 flex justify-center">
+                    <h3 className="text-xl text-gray-800 font-semibold mb-2 hover:text-green-500 flex justify-center ">
                       {project.name}
                     </h3>
                     <p className="text-gray-600 ">{project.description}</p>
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="mt-4 rounded-lg"
+                      className="mt-4 rounded-lg hover:scale-105 transition-all"
                     />
                   </Link>
                 </motion.div>
