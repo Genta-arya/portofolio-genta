@@ -15,6 +15,7 @@ import android from "../../Asset/icons8-android-48.png";
 import waste from "../../Asset/waste1.png";
 import mobile from "../../Asset/blog-mobile1.jpg";
 import Ijazah from "../../Asset/smk2.jpeg";
+import simple from "../../Asset/simple.jpg"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
@@ -81,6 +82,13 @@ function Beranda() {
       description:
         "a simple mobile application for managing diploma files, this application is made using react native has crud features, search for files and some animations",
       image: Ijazah,
+    },
+    {
+      id: 8,
+      name: "Simple LandingPage",
+      description:
+        "A simple landingpage created using react js and tailwind css",
+      image: simple,
     },
   ];
 
