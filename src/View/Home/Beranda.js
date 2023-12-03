@@ -6,7 +6,7 @@ import skripsi from "../../Asset/skripsi_project.jpg";
 import tiket from "../../Asset/tiket1.jpg";
 import gempa from "../../Asset/gempa1.jpg";
 import Bloogers from "../../Asset/blog2.jpg";
-import profil from "../../Asset/profil.jpeg";
+import profil from "../../Asset/profi.png";
 import react from "../../Asset/icons8-react-native-48.png";
 import tailwind from "../../Asset/icons8-tailwind-css-48.png";
 import mysql from "../../Asset/icons8-mysql-48.png";
@@ -15,7 +15,7 @@ import android from "../../Asset/icons8-android-48.png";
 import waste from "../../Asset/waste1.png";
 import mobile from "../../Asset/blog-mobile1.jpg";
 import Ijazah from "../../Asset/smk2.jpeg";
-import simple from "../../Asset/simple.jpg"
+import simple from "../../Asset/simple.jpg";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
@@ -119,28 +119,46 @@ function Beranda() {
       <section id="about" className="py-12">
         <div className="container mx-auto">
           <p className="text-lg text-gray-600 m-5 bg-white shadow-md rounded-lg p-10">
-            I am a mobile development enthusiast with a strong focus on React
-            Native. I specialize in building cross-platform mobile applications
-            using React Native, delivering optimized and engaging user
-            experiences. With my expertise, I can create intuitive interfaces
-            that provide seamless navigation and visually appealing designs.
+            As a passionate mobile developer, I specialize in crafting
+            high-quality applications using React Native for Android platforms.
+            My dedication to creating exceptional user experiences is evident in
+            my ability to deliver cross-platform solutions that seamlessly blend
+            functionality and aesthetics.
             <br />
             <br />
-            In addition to my React Native skills, I have extensive experience
-            in developing backend services using Express.js. I utilize
-            Express.js to build APIs and provide various services that support
-            the mobile applications I develop. I handle HTTP requests and
-            responses, define API routes, establish database connections, and
-            implement server-side business logic to create robust and scalable
-            applications.
+            In the realm of mobile development, my proficiency lies in React
+            Native, a framework that allows me to build robust and visually
+            appealing applications. I take pride in my expertise in creating
+            intuitive interfaces that facilitate effortless navigation,
+            providing users with an engaging and satisfying experience.
             <br />
             <br />
-            My passion for mobile development and backend services allows me to
-            create end-to-end solutions, ensuring a smooth and efficient user
-            experience. I am always eager to learn new technologies and explore
-            innovative approaches to enhance the quality and performance of my
-            applications.
+            Complementing my mobile development skills, I am well-versed in
+            utilizing React.js for web development. This allows me to extend my
+            reach beyond mobile platforms, ensuring a consistent and unified
+            user experience across various devices. By leveraging React.js, I
+            create responsive and dynamic web applications that align with the
+            latest industry standards.
+            <br />
+            <br />
+            On the backend, I harness the power of Express.js to develop robust
+            server-side solutions. This includes building APIs, managing HTTP
+            requests and responses, defining intricate API routes, and
+            establishing secure database connections. My proficiency in
+            Express.js enables me to implement server-side business logic,
+            ensuring the seamless integration of frontend and backend
+            components.
+            <br />
+            <br />
+            My comprehensive approach to development allows me to create
+            end-to-end solutions that prioritize efficiency and user
+            satisfaction. I am committed to staying abreast of the latest
+            industry trends and continuously expanding my skill set to
+            incorporate innovative technologies. This commitment ensures that my
+            applications remain at the forefront of quality and performance,
+            providing users with cutting-edge experiences.
           </p>
+
           {skills.length <= 4 ? (
             <div className="flex justify-center mt-8">
               <div className="max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden">

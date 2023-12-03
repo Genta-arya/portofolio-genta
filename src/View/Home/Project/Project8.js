@@ -26,8 +26,8 @@ function Project8() {
      
      
     ],
-    link: "https://github.com/Genta-arya/Simple-landingpage",
-    demo: "https://simple-landingpage.vercel.app/",
+    link: "https://github.com/Genta-arya/omyoo-production",
+    demo: "https://www.omyoo-studio.online/",
   };
 
   const toggleMobileMenu = () => {
