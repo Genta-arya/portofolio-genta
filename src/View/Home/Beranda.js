@@ -113,7 +113,7 @@ function Beranda() {
           <img
             src={profil}
             alt="Profile"
-            className="rounded-full  h-100  w- mx-auto mb-4 mt-12"
+            className="rounded-full  h-100   mx-auto mb-4 mt-12"
           />
           <h1 className="text-4xl text-white font-bold flex justify-center">
             M Gentha Arya Pratama
