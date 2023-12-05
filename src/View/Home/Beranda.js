@@ -16,6 +16,8 @@ import waste from "../../Asset/waste1.png";
 import mobile from "../../Asset/blog-mobile1.jpg";
 import Ijazah from "../../Asset/smk2.jpeg";
 import simple from "../../Asset/simple.jpg";
+import word from "../../Asset/Word-icon.png";
+import exel from "../../Asset/exel.png";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
@@ -34,6 +36,8 @@ function Beranda() {
     { name: "Tailwind CSS", image: tailwind },
     { name: "Android Studio Kotlin", image: android },
     { name: "Mysql", image: mysql },
+    { name: "Ms Word", image: word },
+    { name: "Ms Excel", image: exel },
   ];
 
   const projects = [
@@ -109,16 +113,53 @@ function Beranda() {
           <img
             src={profil}
             alt="Profile"
-            className="rounded-full w-40 h-40 mx-auto mb-4"
+            className="rounded-full  h-100  w- mx-auto mb-4 mt-12"
           />
           <h1 className="text-4xl text-white font-bold flex justify-center">
-            M.Gentha Arya Pratama
+            M Gentha Arya Pratama
           </h1>
+
+          <div className="text-center mt-4 border border-white"></div>
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://github.com/Genta-arya"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 mr-4"
+            >
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </a>
+            <a
+              href="https://www.instagram.com/mgentaarya/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 mr-4"
+            >
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/m-gentha-arya-pratama-37b419231/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 mr-4"
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </a>
+            <a
+              href="mailto:mgentaarya@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 mr-4"
+            >
+              <FontAwesomeIcon icon={faEnvelope} size="2x" />
+            </a>
+          </div>
         </div>
       </header>
       <section id="about" className="py-12">
         <div className="container mx-auto">
-          <p className="text-lg text-gray-600 m-5 bg-white shadow-md rounded-lg p-10">
+          <p className="text-lg text-gray-600 m-5 bg-white shadow-md rounded-lg p-10 font-serif">
+            <h1 className="py-4 text-3xl font-serif">About me</h1>
             As a passionate mobile developer, I specialize in crafting
             high-quality applications using React Native for Android platforms.
             My dedication to creating exceptional user experiences is evident in
@@ -202,6 +243,12 @@ function Beranda() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.2 }}
+                    style={{
+                      // Adjust positioning based on the index for a pyramid effect
+                      transform: `translateY(${
+                        index < 4 ? index / 2 : -(index - 3) / 2
+                      }rem)`,
+                    }}
                   >
                     <div className="flex items-center mb-2 justify-center">
                       {typeof skill === "string" ? (
@@ -274,45 +321,7 @@ function Beranda() {
         </div>
       </section>
       <section id="contact" className="py-12">
-        <div className="container mx-auto">
-          <div className="text-center mt-4">
-            <h3 className="text-xl font-bold">Contact Me</h3>
-          </div>
-          <div className="flex justify-center mt-6">
-            <a
-              href="https://github.com/Genta-arya"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-800 mr-4"
-            >
-              <FontAwesomeIcon icon={faGithub} size="2x" />
-            </a>
-            <a
-              href="https://www.instagram.com/mgentaarya/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-800 mr-4"
-            >
-              <FontAwesomeIcon icon={faInstagram} size="2x" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/m-gentha-arya-pratama-37b419231/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-800 mr-4"
-            >
-              <FontAwesomeIcon icon={faLinkedin} size="2x" />
-            </a>
-            <a
-              href="mailto:mgentaarya@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-800"
-            >
-              <FontAwesomeIcon icon={faEnvelope} size="2x" />
-            </a>
-          </div>
-        </div>
+        <div className="container mx-auto"></div>
       </section>
       <footer className="bg-gray-800 py-4">
         <div className="container mx-auto text-center">
